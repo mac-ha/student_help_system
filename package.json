@@ -1,0 +1,33 @@
+{
+  "name": "student-system",
+  "version": "2.4.0",
+  "private": true,
+  "description": "Student services portal - login/register, seven student services, and lecturer approvals.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:migrate": "node scripts/migrate.js",
+    "db:seed": "node scripts/seed.js",
+    "create-hod": "node scripts/create-hod.js",
+    "create-admin": "node scripts/create-admin.js",
+    "add-school": "node scripts/add-reference.js school",
+    "add-program": "node scripts/add-reference.js program",
+    "add-course": "node scripts/add-reference.js course",
+    "test": "node test/api.test.js",
+    "set-hod-password": "node scripts/set-hod-password.js",
+    "doctor": "node scripts/doctor.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.2",
+    "helmet": "^8.3.0",
+    "joi": "^18.2.9",
+    "nodemailer": "^10.3.1",
+    "pg": "^8.23.0"
+  }
+}
